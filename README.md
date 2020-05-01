@@ -7,6 +7,7 @@ I am currently in the phase where I did a few tutorials (codecademy pro and a 1 
 
 I thought I'd give it a go and just try and see where it would lead me. 
 I did not use help for this project and did not check the provided link in the book to get me startet. Currently (Mai 2020) I am almost done with two versions which I set out to do. 
+
 Version 01: A script, that will simply allow me to write all the letters of the alphabet. 
 Version 02: A more sophisticated version that will have cleaner code blocks and higher user friendlyness. 
 
