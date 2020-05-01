@@ -1,7 +1,7 @@
 # Turtle_Typewriter
 
 While I am reading and learning "through" the Think Python Book (online here: https://greenteapress.com/wp/think-python/) I came across the excersise to build a typewriter with and through the turtle module of python. 
->> **Chapter 4, Excercise 4.4.**
+-> **Chapter 4, Excercise 4.4.**
 
 I am currently in the phase where I did a few tutorials (codecademy pro and a 1 week course at Freie University Berlin for Python programming and data analysis) and think I know enough to start and work and learn through applied excercises. Or to put it differently: I have to learn through applied excercises or I won't get anywhere with this. 
 
