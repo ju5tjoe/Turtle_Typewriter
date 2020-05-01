@@ -1,0 +1,366 @@
+'''Write an alphabet turtle typewriter.
+
+V01: Simple start. Get USR_Input and trutle-draw the letter accordingly.
+
+As you will see, it is quite tedious...'''
+
+import turtle
+
+bob = turtle.Turtle()
+bob.seth(90)
+
+def get_input():
+	what_to_draw = input('What do you want to draw? ')
+	alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+	if what_to_draw not in alphabet:
+		print('Sorry, you did not choose a letter from the alphabet.')
+	if what_to_draw == 'a':
+		draw_a()
+	if what_to_draw == 'b':
+		draw_b()
+	if what_to_draw == 'c':
+		draw_c()
+	if what_to_draw == 'd':
+		draw_d()
+	if what_to_draw == 'e':
+		draw_e()
+	if what_to_draw == 'f':
+		draw_f()
+	if what_to_draw == 'g':
+		draw_g()
+	if what_to_draw == 'h':
+		draw_h()
+	if what_to_draw == 'i':
+		draw_i()
+	if what_to_draw == 'j':
+		draw_j()
+	if what_to_draw == 'k':
+		draw_k()
+	if what_to_draw == 'l':
+		draw_l()
+	if what_to_draw == 'm':
+		draw_m()
+	if what_to_draw == 'n':
+		draw_n()
+	if what_to_draw == 'o':
+		draw_o()
+	if what_to_draw == 'p':
+		draw_p()
+	if what_to_draw == 'q':
+		draw_q()
+	if what_to_draw == 'r':
+		draw_r()
+	if what_to_draw == 's':
+		draw_s()
+	if what_to_draw == 't':
+		draw_t()
+	if what_to_draw == 'u':
+		draw_u()
+	if what_to_draw == 'v':
+		draw_v()
+	if what_to_draw == 'w':
+		draw_w()
+	if what_to_draw == 'x':
+		draw_x()
+	if what_to_draw == 'y':
+		draw_y()
+	if what_to_draw == 'z':
+		draw_z()
+
+
+
+# First, a function to draw a circle with radius r = 15
+def draw_circle():
+	bob.circle(15)
+
+# A function, to draw a tall straight line
+def draw_straightline_tall():
+	bob.fd(45)
+	bob.rt(180)
+	bob.fd(60)
+
+# A function, to draw a short straght line
+def draw_straghtline_short():
+	bob.fd(15)
+	bob.rt(180)
+	bob.fd(30)
+
+# A function to draw a tall, but low straigt line
+def draw_straghtline_low():
+	bob.fd(45)
+	bob.rt(180)
+	bob.fd(60)
+
+#A function, to draw a hyphen to the right
+def draw_hyphen_right():
+	bob.seth(0)
+	bob.fd(25)
+
+#A function, to draw a hyphen to the left
+def draw_hyphen_left():
+	bob.seth(180)
+	bob.fd(25)
+
+
+'''THE ALPHABET'''
+
+
+def draw_a():
+	draw_circle()
+	draw_straghtline_short()
+	bob.hideturtle() #or bob.ht()
+	turtle.mainloop()
+
+def draw_b():
+	draw_circle()
+	bob.pu()
+	bob.goto(-30, 0)
+	bob.pd()
+	draw_straightline_tall()
+	bob.ht()
+	turtle.mainloop()
+
+def draw_c():
+	bob.seth(180)
+	for i in range(3):
+		bob.fd(35)
+		bob.rt(90)
+	bob.ht()
+	turtle.mainloop()
+
+def draw_d():
+	draw_circle()
+	draw_straightline_tall()
+	bob.ht()
+	turtle.mainloop()
+
+def draw_e():
+	bob.seth(180)
+	for i in range(3):
+		bob.fd(35)
+		bob.rt(90)
+	bob.fd(15)
+	bob.rt(90)
+	bob.fd(35)
+	bob.ht()
+	turtle.mainloop()
+
+def draw_f():
+	draw_straightline_tall()
+	bob.rt(180)
+	bob.fd(45)
+	bob.rt(90)
+	bob.fd(20)
+	bob.pu()
+	bob.lt(90)
+	bob.fd(15)
+	bob.lt(90)
+	bob.pd()
+	bob.fd(20)
+	bob.ht()
+	turtle.mainloop()
+
+def draw_g():
+	draw_circle()
+	bob.rt(180)
+	bob.fd(60)
+	draw_hyphen_left()
+	bob.ht()
+	turtle.mainloop()
+
+def draw_h():
+	draw_straightline_tall()
+	bob.rt(180)
+	bob.fd(35)
+	bob.rt(90)
+	bob.fd(20)
+	bob.rt(90)
+	bob.fd(35)
+	bob.ht()
+	turtle.mainloop()
+
+def draw_i():
+	bob.seth(90)
+	draw_straghtline_low()
+	bob.ht()
+	turtle.mainloop()
+
+def draw_j():
+	bob.seth(90)
+	draw_straghtline_short()
+	bob.goto(0, -30)
+	bob.rt(90)
+	draw_hyphen_left()
+	bob.ht()
+	turtle.mainloop()
+
+def draw_k():
+	bob.seth(90)
+	draw_straightline_tall()
+	bob.rt(180)
+	bob.fd(20.78)
+	bob.rt(35)
+	bob.fd(25)
+	bob.pu()
+	bob.rt(180)
+	bob.fd(25)
+	bob.lt(70)
+	bob.pd()
+	bob.fd(25)
+	bob.ht()
+	turtle.mainloop()
+
+def draw_l():
+	draw_straightline_tall()
+	bob.lt(90)
+	draw_hyphen_right()
+	bob.ht()
+	turtle.mainloop()
+
+def draw_m():
+	bob.seth(90)
+	bob.fd(30)
+	bob.rt(90)
+	bob.fd(20)
+	bob.rt(90)
+	bob.fd(30)
+	bob.rt(180)
+	bob.fd(30)
+	bob.rt(90)
+	bob.fd(20)
+	bob.rt(90)
+	bob.fd(30)
+	bob.ht()
+	turtle.mainloop()
+
+def draw_n():
+	draw_straghtline_short()
+	bob.lt(90)
+	bob.pu()
+	bob.fd(30)
+	bob.lt(90)
+	bob.pd()
+	bob.fd(30)
+	bob.lt(90)
+	bob.fd(30)
+	bob.ht()
+	turtle.mainloop()
+
+def draw_o():
+	draw_circle()
+	bob.ht()
+	turtle.mainloop()
+
+def draw_p():
+	draw_circle()
+	bob.pu()
+	bob.goto(-30, 0)
+	bob.pd()
+	bob.seth(270)
+	draw_straghtline_low()
+	bob.ht()
+	turtle.mainloop()
+
+def draw_q():
+	draw_circle()
+	bob.rt(180)
+	bob.fd(60)
+	bob.ht()
+	turtle.mainloop()
+
+def draw_r():
+	draw_straghtline_short()
+	bob.rt(180)
+	bob.pu()
+	bob.fd(30)
+	bob.rt(90)
+	bob.pd()
+	draw_hyphen_right()
+	bob.ht()
+	turtle.mainloop()
+
+def draw_s():
+	draw_hyphen_left()
+	bob.lt(90)
+	bob.fd(20)
+	draw_hyphen_right()
+	bob.rt(90)
+	bob.fd(20)
+	draw_hyphen_left()
+	bob.ht()
+	turtle.mainloop()
+
+def draw_t():
+	draw_straightline_tall()
+	bob.lt(90)
+	bob.fd(20)
+	bob.pu()
+	bob.lt(90)
+	bob.fd(15)
+	bob.lt(90)
+	bob.pd()
+	bob.fd(20)
+	bob.ht()
+	turtle.mainloop()
+
+def draw_u():
+	draw_straghtline_short()
+	bob.lt(90)
+	bob.fd(20)
+	bob.lt(90)
+	bob.fd(30)
+	bob.ht()
+	turtle.mainloop()
+
+def draw_v():
+	bob.seth(300)
+	bob.fd(35)
+	bob.seth(60)
+	bob.fd(35)
+	bob.ht()
+	turtle.mainloop()
+
+def draw_w():
+	bob.seth(300)
+	bob.fd(35)
+	bob.seth(60)
+	bob.fd(35)
+	draw_v()
+
+def draw_x():
+	bob.seth(135)
+	bob.fd(35)
+	bob.seth(0)
+	bob.pu()
+	bob.fd(25)
+	bob.seth(225)
+	bob.pd()
+	bob.fd(35)
+	bob.ht()
+	turtle.mainloop()
+
+def draw_y():
+	bob.seth(0)
+	bob.lt(120)
+	bob.fd(25)
+	bob.rt(120)
+	bob.pu()
+	bob.fd(25)
+	bob.pd()
+	bob.rt(120)
+	bob.fd(50)
+	bob.ht()
+	turtle.mainloop()
+
+def draw_z():
+	bob.seth(180)
+	bob.fd(25)
+	bob.rt(135)
+	bob.fd(35)
+	bob.lt(135)
+	bob.fd(25)
+	bob.ht()
+	turtle.mainloop()
+
+
+get_input()
