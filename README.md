@@ -10,4 +10,4 @@ I did not use help for this project and did not check the provided link in the b
 Version 01: A script, that will simply allow me to write all the letters of the alphabet. 
 Version 02: A more sophisticated version that will have cleaner code blocks and higher user friendlyness. 
 
-I use atom text editor to write the script and then run it from the command line.
+I use atom text editor to write the script and then run it from the command line/Terminal.
