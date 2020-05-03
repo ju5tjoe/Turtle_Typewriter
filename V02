@@ -1,0 +1,328 @@
+'''Turtle Typewriter V02
+
+A more sophisticated and convenient way to use turtle module to write the alphabet.'''
+
+
+import turtle
+
+turtle.title('Turtle Alphabet Typewriter')
+
+# initialising turtle
+bob = turtle.Turtle()
+
+# set up bob a bit left inside the turtle screen to have more room to write
+def bob_setup():
+	bob.pu()
+	bob.setx(-170)
+	bob.pd()
+
+# a welcoming print statement
+print('This is a turtle typewriter. \n You will be asked continuously \
+to type in what you want to write and it will be printed accordingly. \n Please only use lower letters. \n Have fun!')
+
+
+# a function to draw a square:
+def draw_square():
+	for i in range(4):
+		bob.fd(20)
+		bob.rt(90)
+
+# a function to draw a long line:
+def long_line():
+	bob.fd(60)
+
+# a function to draw a middle long line:
+def middle_line():
+	bob.fd(30)
+
+# a function to draw a short line:
+def short_line():
+	bob.fd(20)
+
+'''THE ALPHABET'''
+
+# a function to make a space in between letters
+def draw_space():
+	bob.pu()
+	bob.fd(20)
+	bob.pd()
+
+def draw_a():
+	bob.pu()
+	bob.sety(30)
+	bob.pd()
+	short_line()
+	bob.rt(90)
+	middle_line()
+	bob.rt(90)
+	draw_square()
+
+def draw_b():
+	bob.seth(90)
+	long_line()
+	bob.sety(20)
+	bob.seth(0)
+	draw_square()
+	new_x = bob.xcor()
+	bob.setx(new_x + 20)
+
+
+def draw_c():
+	x = bob.xcor()
+	bob.pu()
+	bob.setx(x + 20)
+	bob.sety(20)
+	bob.seth(180)
+	bob.pd()
+	for i in range(3):
+		short_line()
+		bob.lt(90)
+
+def draw_d():
+	bob.pu()
+	bob.fd(20)
+	bob.sety(60)
+	bob.seth(270)
+	bob.pd()
+	long_line()
+	bob.rt(90)
+	draw_square()
+
+def draw_e():
+	bob.sety(30)
+	draw_square()
+	bob.rt(90)
+	middle_line()
+	bob.lt(90)
+	short_line()
+
+def draw_f():
+	bob.sety(60)
+	short_line()
+	bob.seth(180)
+	bob.pu()
+	bob.sety(40)
+	bob.pd()
+	short_line()
+	bob.pu()
+	x = bob.xcor()
+	bob.setx(x + 20)
+	bob.sety(0)
+	bob.pd()
+
+def draw_g():
+	bob.pu()
+	y = bob.ycor()
+	bob.sety(y - 40)
+	bob.pd()
+	short_line()
+	bob.lt(90)
+	for i in range(2):
+		short_line()
+	bob.lt(90)
+	draw_square()
+
+def draw_h():
+	bob.sety(60)
+	bob.rt(90)
+	middle_line()
+	bob.lt(90)
+	short_line()
+	bob.rt(90)
+	middle_line()
+
+def draw_i():
+	bob.sety(20)
+
+def draw_j():
+	bob.pu()
+	bob.sety(-40)
+	bob.pd()
+	short_line()
+	bob.lt(90)
+	long_line()
+
+def draw_k():
+	x = bob.xcor()
+	y = bob.ycor()
+	bob.sety(y + 60)
+	bob.sety(y + 30)
+	bob.pu()
+	bob.goto(x + 20, y + 20)
+	bob.pd()
+	bob.goto(x, y + 10)
+	bob.goto(x + 20, y)
+
+def draw_l():
+	bob.sety(60)
+	bob.sety(0)
+	short_line()
+
+def draw_m():
+	for i in range(2):
+		draw_n()
+
+def draw_n():
+	bob.sety(30)
+	short_line()
+	bob.sety(0)
+
+def draw_o():
+	x = bob.xcor()
+	bob.seth(90)
+	draw_square()
+	bob.setx(x + 20)
+
+def draw_p():
+	x = bob.xcor()
+	bob.seth(90)
+	draw_square()
+	bob.rt(180)
+	middle_line()
+	bob.pu()
+	bob.sety(0)
+	bob.setx(x + 20)
+	bob.pd()
+
+def draw_q():
+	x = bob.xcor()
+	bob.seth(90)
+	draw_square()
+	bob.setx(x +20)
+	bob.rt(180)
+	middle_line()
+
+def draw_r():
+	bob.seth(90)
+	short_line()
+	bob.rt(90)
+	short_line()
+
+def draw_s():
+	for i in range(3):
+		short_line()
+		bob.lt(90)
+	bob.seth(90)
+	for i in range(2):
+		short_line()
+		bob.rt(90)
+
+def draw_t():
+	x = bob.xcor()
+	bob.sety(60)
+	bob.sety(30)
+	short_line()
+	bob.pu()
+	bob.sety(0)
+	bob.setx(x)
+	bob.pd()
+	short_line()
+
+def draw_u():
+	bob.sety(30)
+	bob.sety(0)
+	short_line()
+	bob.sety(30)
+
+def draw_v():
+	x = bob.xcor()
+	y = bob.ycor()
+	bob.pu()
+	bob.sety(y + 20)
+	bob.pd()
+	bob.goto(x + 10, y)
+	bob.goto(x + 20, y + 20)
+
+def draw_w():
+	for i in range(2):
+		draw_u()
+
+def draw_x():
+	x = bob.xcor()
+	y = bob.ycor()
+	bob.goto(x + 20, y + 20)
+	bob.pu()
+	bob.goto(x, y + 20)
+	bob.pd()
+	bob.goto(x + 20, y)
+
+def draw_y():
+	x = bob.xcor()
+	y = bob.ycor()
+	bob.pu()
+	bob.sety(y + 20)
+	bob.pd()
+	bob.goto(x + 10, y)
+	bob.goto(x + 20, y +20)
+	bob.goto(x, y - 20)
+	bob.pu()
+	bob.goto(x + 20, y)
+	bob.pd()
+
+def draw_z():
+	x = bob.xcor()
+	short_line()
+	bob.pu()
+	bob.sety(20)
+	bob.pd()
+	bob.goto(x, 0)
+	bob.pu()
+	bob.sety(20)
+	bob.pd()
+	short_line()
+
+#a dictionary containing the alphabet and to call the functions
+alphabet = {'a': draw_a, 'b': draw_b, 'c': draw_c, 'd': draw_d, 'e': draw_e, 'f': draw_f,
+'g': draw_g, 'h': draw_h, 'i': draw_i, 'j': draw_j, 'k': draw_k, 'l': draw_l, 'm': draw_m, 'n': draw_n,
+'o': draw_o, 'p': draw_p, 'q': draw_q, 'r': draw_r, 's': draw_s, 't': draw_t, 'u': draw_u, 'v': draw_v,
+'w': draw_w, 'x': draw_x, 'y': draw_y, 'z': draw_z, ' ': draw_space}
+
+# a function to reset bob in order to have the same spaces between letters
+def reset_bob(x):
+	bob.pu()
+	new_x_cor = x + 20
+	#new_y_cor = 0
+	bob.setx(new_x_cor)
+	#bob.sety(new_y_cor)
+	bob.seth(0)
+	bob.pd()
+
+# a function to reset the y coordinate of the turtle (as a form of encapsulation)
+def reset_y():
+	bob.pu()
+	bob.sety(0)
+	bob.pd()
+
+# the main function to get input and do the trick
+def get_input():
+	bob_setup()
+	option = True
+	while option:
+		usr_in = input('What letter do you want to type? ').lower()
+		if usr_in in alphabet:
+			alphabet[usr_in]()
+			ask = input('Another one? y/n? ')
+			if ask == 'y':
+				cur_x = bob.xcor() #get bobs current x position
+				reset_bob(cur_x) #set-up bob for a new letter
+				reset_y()
+			elif ask == 'n':
+				print('Ok! Then that is that! Bye! Please do not forget to close the window.')
+				option = False
+				bob.ht()
+				turtle.mainloop()
+			else:
+				curr_x = bob.xcor()
+				reset_bob(curr_x)
+				reset_y()
+				print('Sorry. Did not understand.')
+		elif usr_in == 'stop':
+				print('Ok! Breaking the cycle. Bye! Please do not forget to close the window.')
+				option = False
+				bob.ht()
+				turtle.mainloop()
+		else:
+			print('This did not work. Please only use letters from the alphabet.')
+
+
+get_input()
